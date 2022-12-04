@@ -6,7 +6,7 @@ const carSchema = mongoose.Schema({
         require: [true, "Please provide name for the car"],
     },
     mileage: {
-        type: String,
+        type: Number,
         require: [true, "Please provide mileage for the car"],
     },
     location: {
@@ -22,7 +22,7 @@ const carSchema = mongoose.Schema({
         require: [true, "Please provide transmission for the car"],
     },
     price: {
-        type: String,
+        type: Number,
         require: [true, "Please provide price for the car"],
     }
 })

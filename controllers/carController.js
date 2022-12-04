@@ -4,7 +4,7 @@ export const saveCar = async (req, res, next) => {
 
     try {
         const car = new Car(req.body)
-        const result = car.save()
+        const result = await car.save()
         res.status(200).json({
             status: 'success',
             message: 'Car data saved successfully',
