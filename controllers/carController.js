@@ -24,3 +24,27 @@ export const saveCar = async (req, res, next) => {
 
 
 }
+
+export const getCars = async (req, res, next) => {
+
+    try {
+        const result = await Car.find({})
+        res.status(200).json({
+            status: 'success',
+            message: 'Car data saved successfully',
+            result
+
+        })
+
+
+    } catch (error) {
+        res.status(400).json({
+            status: 'fail',
+            message: 'Fail to save car data',
+            error: error.message,
+
+        })
+    }
+
+
+}

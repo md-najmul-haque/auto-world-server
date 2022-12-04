@@ -1,8 +1,8 @@
 import express from 'express'
-import { saveCar } from '../../controllers/carController.js'
+import { getCars, saveCar } from '../../controllers/carController.js'
 
 const carRoutes = express.Router()
 
-carRoutes.route('/car').post(saveCar)
+carRoutes.route('/car').post(saveCar).get(getCars)
 
 export default carRoutes;
