@@ -9,6 +9,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+// route
 app.use('/api/v1', carRoutes)
 
 app.get('/', (req, res) => {

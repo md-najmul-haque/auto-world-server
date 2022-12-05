@@ -36,6 +36,7 @@ const carSchema = mongoose.Schema({
     }
 )
 
+//model
 const Car = mongoose.model('Car', carSchema)
 
 export default Car

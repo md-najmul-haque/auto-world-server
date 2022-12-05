@@ -1,13 +1,9 @@
 import Car from "../model/carSchema.js"
 
+// save a car controller
 export const saveCar = async (req, res, next) => {
 
     try {
-        // const car = req.body
-        // const result = await Car.create(car)
-
-        console.log(req.body)
-
         const car = new Car(req.body)
         const result = await car.save()
 
@@ -28,6 +24,7 @@ export const saveCar = async (req, res, next) => {
 
 }
 
+// get all cars controller
 export const getCars = async (req, res, next) => {
 
     try {
