@@ -6,6 +6,8 @@ export const saveCar = async (req, res, next) => {
         // const car = req.body
         // const result = await Car.create(car)
 
+        console.log(req.body)
+
         const car = new Car(req.body)
         const result = await car.save()
 

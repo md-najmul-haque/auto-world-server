@@ -21,11 +21,20 @@ const carSchema = mongoose.Schema({
         type: String,
         require: [true, "Please provide transmission for the car"],
     },
+    img: {
+        type: String,
+        required: 'URL can\'t be empty',
+        unique: true
+    },
     price: {
         type: Number,
         require: [true, "Please provide price for the car"],
+    },
+},
+    {
+        timestamps: true
     }
-})
+)
 
 const Car = mongoose.model('Car', carSchema)
 

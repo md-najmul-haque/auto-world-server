@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 import colors from 'colors'
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5001
 
 //database connection
 mongoose.connect(process.env.DATABASE).then(() => {
